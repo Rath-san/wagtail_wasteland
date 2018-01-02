@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block content %}
+
+  {% url 'wagtailadmin_home' %}
+
+  <h1>{{ self }}</h1>
+
+  {{ self.select }}
+
+  {{ self.is_upperclass }}
+
+  {{ self.body|richtext }}
+
+{% endblock %}
